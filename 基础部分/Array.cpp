@@ -18,7 +18,7 @@ int myMax(int a, int b, int c)
 {
     if(a==b||a==c||b==c)
     {
-        cout<<"有相同的两个数字"<<endl;
+        cout<<"有相同的两个以上相同的数字"<<endl;
         return -1;
     }
 
