@@ -28,15 +28,14 @@ void all_multiply()
     cin >> a;
     for (int i = 1; i <= a; i++)
     {
-        if (0 == a % i)
+        if (0 == a % i && i <= a / i)
         {
             cout << i << "*";
-            cout << a / i << "= ";
+            cout << a / i << "=";
             cout << a << endl;
         }
     }
 }
-
 
 int main()
 {
