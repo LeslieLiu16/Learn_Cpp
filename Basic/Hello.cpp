@@ -37,6 +37,8 @@ void all_multiply()
     }
 }
 
+
+
 int main()
 {
     int a, b;
