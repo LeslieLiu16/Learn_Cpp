@@ -31,8 +31,9 @@ int main()
 
     ptrbox = &Box1;
 
-    cout << "VOlume of Box1:" << ptrbox->Volume() << endl;
+    cout << "Volume of Box1:" << ptrbox->Volume() << endl;
     ptrbox = &Box2;
-    cout << "VOlume of Box2:" << ptrbox->Volume() << endl;
+    cout << "Volume of Box2:" << ptrbox->Volume() << endl;
+    system("pause");
     return 0;
 }

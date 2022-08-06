@@ -1,41 +1,48 @@
-# include "iostream"
+#include "iostream"
 using namespace std;
 
-class Line{
-    public:
-        void setLength(double len);
-        double getLength();
-        Line(double len);
-        ~Line();
-    private:
-        double length;
+class Line
+{
+public:
+    void setLength(double len);
+    double getLength();
+    Line(double len);
+    ~Line();
+
+private:
+    double length;
 };
 
-Line::Line(double len){
+Line::Line(double len)
+{
     length = len;
-    cout << "对象正在创建···" << endl;
+    cout << "Line is created" << endl;
 }
 
-Line::~Line(){
-    cout << "对象被删除···" << endl;
+Line::~Line()
+{
+    cout << "Line is deleted" << endl;
 }
 
-void Line::setLength(double len){
+void Line::setLength(double len)
+{
 
     length = len;
 }
 
-double Line::getLength(){
-    
+double Line::getLength()
+{
+
     return length;
 }
 
-int main(){
+int main()
+{
 
     Line line(10.0);
-    cout << "长度为:" << line.getLength() <<endl;
+    cout << "length is:" << line.getLength() << endl;
     line.setLength(6.0);
-    cout << "更改后的长度为:" << line.getLength() << endl;
+    cout << "length is:" << line.getLength() << endl;
     // system("pause");
     return 0;
 }
