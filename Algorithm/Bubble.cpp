@@ -1,18 +1,26 @@
 #include <iostream>
+// #include <malloc.h>
 using namespace std;
+
+void bubble(double *arr);
+
 
 int main()
 {
-    //创建一个数组
-    int arr [] = {8, 9, 4, 1, 3, 2, 0, 7, 6, 5};
-    //计算数组的长度
-    int length = sizeof(arr) / sizeof(arr[0]);
-    //使用for循环
+
+    double arr [] = {8, 9, 4, 1, 3, 2, 0, 7, 6, 5};
+    bubble(arr);
+    system("pause");
+    return 0;
+}
+
+void bubble(double *arr){
+    int length = sizeof(*arr)/sizeof(double);
+    // int length = sizeof(*arr)/sizeof(arr[0]);
     for (int i = 0; i < length; i++)
     {
         for (int j = 0; j < length - 1; j++)
         {
-            //如果前一个位置上的元素比后一个位置上的元素大，则交换位置
             if (arr[j] > arr[j + 1])
             {
                 int temp = arr[j];
@@ -21,13 +29,9 @@ int main()
             }
         }
     }
-    //打印结果
-    cout<<"排序后的结果为："<<endl;
+
     for (int i = 0; i < length; i++)
     {
         cout << arr[i] << " ";
     }
-    
-    system("pause");
-    return 0;
 }
